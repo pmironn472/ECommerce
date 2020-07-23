@@ -25,6 +25,7 @@ public class Application {
         product.setPrice(product.getPrice().toCurrency("MDL"));
         Cart.getInstance().add(product);
         Cart.getInstance().add(fakeProduct);
+        Cart.getInstance().findById(2).setPrice(new Money("USD",276f));
         Cart.getInstance().update(1,3);
         Cart.getInstance().findAll().forEach(System.out::println);
         System.out.println(Cart.getInstance().getTotal());
