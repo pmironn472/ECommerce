@@ -17,10 +17,6 @@ public class CurrencyProvider {
         put("RON", new Currency("RON", 4.84));
     }};
 
-    public CurrencyProvider() {
-    }
-
-
     public Currency getCurrency(String code) {
         return currencies.get(code);
     }
